@@ -33,7 +33,7 @@ docker login -u docker -p docker nexus3.onap.org:10001
 sudo apt-get install make -y
 
 #sudo docker run -d --restart=unless-stopped -p 8080:8080 --name rancher_server rancher/server:v$RANCHER_VERSION
-sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher
+sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher:stable
 sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/v$KUBECTL_VERSION/bin/linux/amd64/kubectl
 sudo chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
